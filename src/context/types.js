@@ -1,0 +1,5 @@
+export const GET_RESTAURANTS = "SEARCH_RESTAURANTS";
+export const GET_REVIEWS = "GET_REVIEWS";
+export const SET_LOADING = "SET_LOADING";
+export const NO_RESULTS = "NO_RESULTS";
+export const SEARCH_ERROR = "SEARCH_ERROR";

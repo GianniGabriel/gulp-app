@@ -1,38 +1,80 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto:wght@400;700&display=swap");
+
+* {
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* font-family: "Alata", sans-serif; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #fefefe;
+  line-height: 1.4;
+  height: 5000px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* #bg-image {
+  background: #fff url("https://source.unsplash.com/1600x900/?breakfast,dinner")
+    no-repeat fixed center/cover;
+  height: 100vh;
+} */
+
+.form-label {
+  color: #333;
+  height: 2.5rem;
+  text-align: left;
+  width: 25vw;
+  margin: 1rem 0 1rem auto;
+
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  /* border: none; */
+  background-color: #fefefe;
+  border: 1px solid #333;
+  border-right: 0px;
+  border-radius: 5px 0 0 5px;
+}
+.location-label {
+  color: #333;
+  height: 2.5rem;
+  text-align: left;
+  width: 25vw;
+  margin: 1rem 0 1rem auto;
+
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  /* border: none; */
+  background-color: #fefefe;
+  border: 1px solid #333;
+  border-left: 1px dashed black;
+}
+
+#search-btn {
+  position: absolute;
+  /* border-style: none; */
+  border: 1px solid #333;
+  border-left: 0px;
+
+  margin: 1rem 0 1rem auto;
+  border-radius: 0 5px 5px 0;
+
+  height: 2.5rem;
+  font: inherit;
   color: white;
+  background-color: #d32323;
+  padding: 0.2rem 0.7rem;
 }
 
-.App-link {
-  color: #61dafb;
+#search-btn:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-item {
+  margin: 2.3rem 0.4rem 2.3rem 0.4rem;
 }
