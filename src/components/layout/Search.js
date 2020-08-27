@@ -6,12 +6,13 @@ const Search = ({ styleObj }) => {
   const [location, setLocation] = useState("");
 
   const restaurantContext = useContext(RestaurantContext);
-  const { getRestaurants } = restaurantContext;
+  const { getRestaurants, loading } = restaurantContext;
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (location === "") {
-      getRestaurants(text, "NYC");
+      setLocation("New York, NY");
+      getRestaurants(text, "New York, NY");
     } else {
       getRestaurants(text, location);
     }
@@ -22,7 +23,7 @@ const Search = ({ styleObj }) => {
         <input
           type="text"
           name="text"
-          className="form-label"
+          className="text-input"
           placeholder="delis, burgers, chinese..."
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -30,12 +31,21 @@ const Search = ({ styleObj }) => {
         <input
           type="text"
           name="location"
-          className="location-label"
+          className="location-input"
           placeholder="address, city, or zipcode"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
-        <input id="search-btn" type="submit" value="Search" />
+
+        {!loading ? (
+          <button id="search-btn" type="submit">
+            <i className="fas fa-search"></i>
+          </button>
+        ) : (
+          <button id="search-btn" type="submit" disabled>
+            {"Loading..."}
+          </button>
+        )}
       </form>
     </div>
   );

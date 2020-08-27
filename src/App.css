@@ -12,20 +12,59 @@
 body {
   background-color: #fefefe;
   line-height: 1.4;
-  height: 5000px;
 }
 
 ul {
   list-style: none;
 }
 
-/* #bg-image {
-  background: #fff url("https://source.unsplash.com/1600x900/?breakfast,dinner")
-    no-repeat fixed center/cover;
-  height: 100vh;
-} */
+.px-1 {
+  padding: 0 0.5rem;
+}
+.px-2 {
+  padding: 0 1rem;
+}
+.px-3 {
+  padding: 0 1.5rem;
+}
 
-.form-label {
+.py-1 {
+  padding: 0.5rem 0;
+}
+.py-2 {
+  padding: 1rem 0;
+}
+.py-3 {
+  padding: 1.5rem 0;
+}
+
+.mx-1 {
+  margin: 0 0.5rem;
+}
+.mx-2 {
+  margin: 0 1rem;
+}
+.mx-3 {
+  margin: 0 1.5rem;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-1 {
+  margin: 1.5rem 0;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.text-input,
+.text-input:focus {
   color: #333;
   height: 2.5rem;
   text-align: left;
@@ -34,13 +73,14 @@ ul {
 
   padding: 0.4rem;
   font-size: 1.2rem;
-  /* border: none; */
   background-color: #fefefe;
   border: 1px solid #333;
   border-right: 0px;
   border-radius: 5px 0 0 5px;
+  outline: none;
 }
-.location-label {
+.location-input,
+.location-input:focus {
   color: #333;
   height: 2.5rem;
   text-align: left;
@@ -49,15 +89,18 @@ ul {
 
   padding: 0.4rem;
   font-size: 1.2rem;
-  /* border: none; */
   background-color: #fefefe;
   border: 1px solid #333;
   border-left: 1px dashed black;
+  outline: none;
+}
+
+#search-bar {
+  z-index: 5;
 }
 
 #search-btn {
   position: absolute;
-  /* border-style: none; */
   border: 1px solid #333;
   border-left: 0px;
 
@@ -77,4 +120,63 @@ ul {
 
 .result-item {
   margin: 2.3rem 0.4rem 2.3rem 0.4rem;
+}
+
+.restaurant-card {
+  display: flex;
+  padding: 1rem;
+  border: #ccc 1px solid;
+  border-radius: 7px;
+  margin: 2rem auto;
+  width: 40%;
+  height: 200px;
+}
+
+.restaurant-image {
+  height: 170px;
+  width: 170px;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.info-section {
+  width: 75%;
+  position: relative;
+}
+
+.info-section,
+.info-section h3,
+.info-section p {
+  text-align: left;
+}
+
+.restaurant-title {
+  font-size: 1.25rem;
+  width: 18.75rem;
+}
+
+.categories {
+  font-size: 1rem;
+  color: #454545;
+}
+
+.rating {
+  display: flex;
+  position: absolute;
+  bottom: 25%;
+}
+
+.rating p {
+  color: #676767;
+  align-self: center;
+  font-size: 1rem;
+}
+
+.address p {
+  font-size: 0.8rem;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  top: 0;
+  right: 0;
 }

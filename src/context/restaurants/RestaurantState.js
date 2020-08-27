@@ -61,7 +61,7 @@ const RestaurantState = (props) => {
         // Filter out restaurant list to only restaurants under 3 stars
         (restaurant) => restaurant.rating <= 3
       );
-      console.log(restaurantList.length);
+      restaurantList.reverse();
       dispatch({ type: GET_RESTAURANTS, payload: restaurantList });
       if (restaurantList.length > 0) {
         restaurantList.forEach((restaurant) => {
@@ -97,7 +97,6 @@ const RestaurantState = (props) => {
         // Only get reviews that are less than 3 stars
         [id]: reviews_res.data.reviews.filter((review) => review.rating < 3),
       };
-      console.log("Dispatch for reviews");
       dispatch({ type: GET_REVIEWS, payload: restReview });
     } catch (err) {
       dispatch({ type: SEARCH_ERROR, payload: err.response });
