@@ -16,10 +16,14 @@ const Search = ({ styleObj }) => {
     } else {
       getRestaurants(text, location);
     }
+    // Scroll down after 50ms delay
+    setTimeout(() => {
+      window.scrollTo(0, 3000);
+    }, 50);
   };
   return (
     <div id="search-bar" style={styleObj}>
-      <form onSubmit={onSubmit}>
+      <form action="#results" onSubmit={onSubmit}>
         <input
           type="text"
           name="text"

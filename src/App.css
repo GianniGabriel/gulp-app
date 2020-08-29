@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto:wght@400;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -123,13 +127,17 @@ button:focus {
 }
 
 .restaurant-card {
-  display: flex;
   padding: 1rem;
   border: #ccc 1px solid;
   border-radius: 7px;
   margin: 2rem auto;
-  width: 40%;
-  height: 200px;
+  width: 60%;
+  /* height: 200px; */
+}
+
+.restaurant-section {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 .restaurant-image {
@@ -140,7 +148,7 @@ button:focus {
 }
 
 .info-section {
-  width: 75%;
+  width: 100%;
   position: relative;
 }
 
@@ -165,6 +173,10 @@ button:focus {
   position: absolute;
   bottom: 25%;
 }
+.rating img {
+  width: 204px;
+  height: 36px;
+}
 
 .rating p {
   color: #676767;
@@ -179,4 +191,40 @@ button:focus {
   text-align: right;
   top: 0;
   right: 0;
+}
+
+.reviews-seperator {
+  border: 1px dashed #ccc;
+}
+
+.review-item {
+  position: relative;
+  margin: 1rem 0rem 2rem 1rem;
+}
+
+.review-topbar {
+  display: flex;
+  align-items: center;
+}
+
+.review-topbar p {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  margin: 0.75rem 0.75rem 0.75rem 0;
+  border-radius: 4px;
+}
+
+.review-rating {
+  width: 176px;
+  height: 30px;
+}
+
+.review-text {
+  text-align: left;
+  margin-left: 3.75rem;
 }
