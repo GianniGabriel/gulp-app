@@ -38,12 +38,16 @@ const Showcase = () => {
           color: "white",
           fontSize: "5rem",
           font: "'Alata', sans-serif",
-          textShadow: "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black",
+          background: "rgba(51,51,51,0.5)",
+          width: "20%",
+          margin: "auto",
+          borderRadius: "10px",
+          textShadow: "-1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333",
           position: "relative",
           top: "25vh",
         }}
       >
-        Gulp
+        <i style={{ color: "#FFCB01" }} className="far fa-dizzy"></i> Gulp
       </h1>
       <Search styleObj={searchStyle} />
     </div>
