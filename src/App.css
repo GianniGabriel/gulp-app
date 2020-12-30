@@ -228,3 +228,9 @@ button:focus {
   text-align: left;
   margin-left: 3.75rem;
 }
+
+.loading-tip {
+  color: #333;
+  font-size: 1.2rem;
+  padding: 20px 0;
+}
