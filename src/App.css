@@ -142,6 +142,33 @@ button:focus {
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .search-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-input,
+  .text-input:focus,
+  .location-input,
+  .location-input:focus {
+    margin: 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  #search-btn {
+    position: inherit;
+    margin: 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
 .result-item {
   margin: 2.3rem 0.4rem 2.3rem 0.4rem;
 }

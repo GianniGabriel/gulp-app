@@ -24,32 +24,34 @@ const Search = ({ styleObj }) => {
   return (
     <div id="search-bar" style={styleObj}>
       <form action="#results" onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="text"
-          className="text-input"
-          placeholder="delis, burgers, chinese..."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <input
-          type="text"
-          name="location"
-          className="location-input"
-          placeholder="address, city, or zipcode"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        />
+        <div className="search-inputs">
+          <input
+            type="text"
+            name="text"
+            className="text-input"
+            placeholder="delis, burgers, chinese..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <input
+            type="text"
+            name="location"
+            className="location-input"
+            placeholder="address, city, or zipcode"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
 
-        {!loading ? (
-          <button id="search-btn" type="submit">
-            <i className="fas fa-search"></i>
-          </button>
-        ) : (
-          <button id="search-btn" type="submit" disabled>
-            {"Loading..."}
-          </button>
-        )}
+          {!loading ? (
+            <button id="search-btn" type="submit">
+              <i className="fas fa-search"></i>
+            </button>
+          ) : (
+            <button id="search-btn" type="submit" disabled>
+              {"Loading..."}
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
