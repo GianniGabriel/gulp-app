@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import RestaurantContext from "../../context/restaurants/restaurantContext";
 import RestaurantItem from "./RestaurantItem";
 import ReviewItem from "./ReviewItem";
@@ -8,19 +8,9 @@ const Restaurants = () => {
   const restaurantContext = useContext(RestaurantContext);
   const { restaurants, reviews, loading } = restaurantContext;
   let counter = 1;
-  useEffect(() => {
-    //eslint-disable-next-line
-  }, []);
+
   if (loading) {
-    return (
-      <>
-        <p class="loading-tip">
-          If Loading takes too long, the Cors-anywhere servers are probably
-          down. Things should be fixed in a few hours.
-        </p>
-        <Spinner />
-      </>
-    );
+    return <Spinner />;
   } else if (restaurants !== null && restaurants.length === 0) {
     return (
       <div id="results" className="py-3">
