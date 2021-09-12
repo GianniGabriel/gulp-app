@@ -23,30 +23,8 @@ const Showcase = () => {
       };
 
   return (
-    <div
-      id="bg-image"
-      ref={showcase}
-      style={{
-        background:
-          '#fff url("https://source.unsplash.com/1600x900/?breakfast,dinner") no-repeat fixed center/cover',
-        height: "100vh",
-        width: "100vw",
-      }}
-    >
-      <h1
-        style={{
-          color: "white",
-          fontSize: "5rem",
-          font: "'Alata', sans-serif",
-          background: "rgba(51,51,51,0.5)",
-          width: "20%",
-          margin: "auto",
-          borderRadius: "10px",
-          textShadow: "-1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333",
-          position: "relative",
-          top: "25vh",
-        }}
-      >
+    <div id="bg-image" className="showcase-background" ref={showcase}>
+      <h1 className="gulp-title">
         <i style={{ color: "#FFCB01" }} className="far fa-dizzy"></i> Gulp
       </h1>
       <Search styleObj={searchStyle} />

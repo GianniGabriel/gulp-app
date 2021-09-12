@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -10,7 +11,6 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* font-family: "Alata", sans-serif; */
 }
 
 body {
@@ -99,6 +99,26 @@ button:focus {
   outline: none;
 }
 
+.showcase-background {
+  background: #fff url("https://source.unsplash.com/1600x900/?dinner") no-repeat
+    fixed center/cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gulp-title {
+  color: white;
+  font: 5rem "Alata", sans-serif;
+  background: rgba(51, 51, 51, 0.5);
+  padding: 0 2rem;
+  border-radius: 10px;
+  text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333;
+}
+
 #search-bar {
   z-index: 5;
 }
@@ -132,7 +152,6 @@ button:focus {
   border-radius: 7px;
   margin: 2rem auto;
   width: 60%;
-  /* height: 200px; */
 }
 
 .restaurant-section {
