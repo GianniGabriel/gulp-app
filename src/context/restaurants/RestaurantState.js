@@ -19,7 +19,7 @@ const RestaurantState = (props) => {
   };
 
   const [state, dispatch] = useReducer(restaurantReducer, initialState);
-  const cors_api_url = "https://cors-anywhere.herokuapp.com/";
+  const cors_api_url = "https://gulp-anywhere.herokuapp.com/";
 
   // Get Restaurants from Yelp API
   const getRestaurants = async (text, location) => {
