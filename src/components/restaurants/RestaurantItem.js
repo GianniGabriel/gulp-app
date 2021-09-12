@@ -21,6 +21,9 @@ const RestaurantItem = ({ restaurant, count }) => {
         <p className="categories">
           {restaurant.categories.map((category) => category.title).join(", ")}
         </p>
+        <div className="address">
+          <p>{restaurant.location.display_address.join(" ")}</p>
+        </div>
         <div className="rating">
           <img
             src={(() => {
@@ -42,10 +45,6 @@ const RestaurantItem = ({ restaurant, count }) => {
             alt={`${restaurant.rating} stars`}
           />
           <p className="mx-1">{restaurant.review_count} reviews</p>
-        </div>
-
-        <div className="address">
-          <p>{restaurant.location.display_address.join(" ")}</p>
         </div>
       </div>
     </div>

@@ -142,33 +142,6 @@ button:focus {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-  .search-inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .text-input,
-  .text-input:focus,
-  .location-input,
-  .location-input:focus {
-    margin: 0;
-    border: 1px solid #333;
-    border-radius: 5px;
-    width: 100%;
-  }
-
-  #search-btn {
-    position: inherit;
-    margin: 0;
-    border: 1px solid #333;
-    border-radius: 5px;
-    width: 100%;
-  }
-}
-
 .result-item {
   margin: 2.3rem 0.4rem 2.3rem 0.4rem;
 }
@@ -219,6 +192,7 @@ button:focus {
   position: absolute;
   bottom: 25%;
 }
+
 .rating img {
   width: 204px;
   height: 36px;
@@ -279,4 +253,58 @@ button:focus {
   color: #333;
   font-size: 1.2rem;
   padding: 20px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .restaurant-card {
+    width: 95%;
+  }
+
+  .restaurant-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant-image {
+    width: 50%;
+    height: auto;
+    margin: inherit;
+  }
+
+  .rating {
+    display: flex;
+    margin-top: 1rem;
+    position: inherit;
+    bottom: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-input,
+  .text-input:focus,
+  .location-input,
+  .location-input:focus,
+  #search-btn {
+    position: inherit;
+    margin: 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .address p {
+    position: inherit;
+    top: unset;
+    right: unset;
+    width: unset;
+    text-align: left;
+    font-size: 1rem;
+  }
 }
